@@ -3,16 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>간단한 GPT 챗봇</title>
+  <title>학습 자료 분석 챗봇</title>
   <script type="module" src="/main.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 p-4 flex flex-col items-center justify-center h-screen">
+<body class="bg-gray-100 p-4 flex flex-col items-center justify-center min-h-screen">
   <div class="bg-white shadow-lg rounded-lg w-full max-w-lg p-4">
-    <h1 class="text-xl font-bold mb-4">GPT 간단 챗봇</h1>
+    <h1 class="text-xl font-bold mb-4">학습 자료 분석 챗봇</h1>
+    <div class="mb-4">
+      <label class="block text-sm font-medium text-gray-700 mb-2">학습 자료 이미지 업로드</label>
+      <input type="file" id="imageUpload" accept="image/*" class="w-full p-2 border rounded">
+      <div id="imagePreview" class="mt-2 hidden">
+        <img id="preview" class="max-w-full h-auto rounded">
+      </div>
+    </div>
     <div id="chatbox" class="h-64 overflow-auto bg-gray-50 p-2 rounded mb-2"></div>
-    <input type="text" id="userInput" placeholder="질문을 입력하세요..." class="border p-2 w-full rounded mb-2">
-    <button id="sendBtn" class="bg-blue-500 text-white rounded p-2 w-full">질문하기</button>
+    <div class="flex gap-2">
+      <input type="text" id="userInput" placeholder="질문을 입력하세요..." class="border p-2 flex-1 rounded">
+      <button id="sendBtn" class="bg-blue-500 text-white rounded p-2 px-4">전송</button>
+    </div>
   </div>
 </body>
 </html>
